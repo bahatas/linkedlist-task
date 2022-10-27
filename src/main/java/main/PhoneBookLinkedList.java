@@ -8,13 +8,19 @@ public class PhoneBookLinkedList {
     public PhoneNode tail;
     public int size;
 
-    public boolean isEmpty() {return false;}
+    public boolean isEmpty() {
+        return false;}
 
-    public int size() {return 0;}
+    public int size() {
+        return 0;}
 
-    public void printPhoneBook() {}
+    public void printPhoneBook() {
 
-    public void add(Contact contact) {}
+    }
+
+    public void add(Contact contact) {
+
+    }
 
     public PhoneNode findByFirstName(String firstName) {return null;}
 
