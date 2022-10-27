@@ -1,6 +1,7 @@
 package main;
 
 import java.util.List;
+import java.util.NoSuchElementException;
 
 public class PhoneBookLinkedList {
 
@@ -40,21 +41,35 @@ public class PhoneBookLinkedList {
     }
 
     public PhoneNode findByFirstName(String firstName) {
-        return null;
+        if (isEmpty()) {
+            throw new NoSuchElementException("its not here guys");
+        }
+        PhoneNode current = head;
+        while (current != null) {
+            if (current.contact.getFirstName().equals(firstName)) {
+                return current;
+            }
+            current = current.next;
+        }
+        throw new NoSuchElementException("doesnt exist");
     }
 
     public List<PhoneNode> findAllByLastName(String lastName) {
         return null;
+        //kadifa
     }
 
     public void deleteByFirstName(String firstName) {
+        //entisar
     }
 
     public void deleteAllMatchingLastName(String lastName) {
+        //adelina
     }
 
     public List<PhoneNode> findAll() {
         return null;
+        //medina
     }
 
 }
