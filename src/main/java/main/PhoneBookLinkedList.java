@@ -20,7 +20,7 @@ public class PhoneBookLinkedList {
     public void printPhoneBook() {
         PhoneNode current = head;
         while (current != null) {
-            System.out.println(current);
+            System.out.println(current.contact);
             current = current.next;
         }
 
@@ -65,6 +65,20 @@ public class PhoneBookLinkedList {
 
     public void deleteAllMatchingLastName(String lastName) {
         //adelina
+
+        if (isEmpty()) {
+            throw new NoSuchElementException("No such element");
+        }
+        PhoneNode current = head;
+
+        while (current != null && current.next != null) {
+            if (current.next.contact.getLastname().equals(lastName)) {
+                current.next = current.next.next;
+            } else {
+                current = current.next;
+            }
+
+        }
     }
 
     public List<PhoneNode> findAll() {
