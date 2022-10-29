@@ -1,5 +1,6 @@
 package main;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.NoSuchElementException;
 
@@ -55,9 +56,28 @@ public class PhoneBookLinkedList {
     }
 
     public List<PhoneNode> findAllByLastName(String lastName) {
-        return null;
-        //kadifa
+
+        if (isEmpty()) {
+
+            throw new NoSuchElementException("It is empty");
+        }
+        List<PhoneNode> listLastName = new ArrayList<>();
+
+        PhoneNode current1 =head;
+
+        while (current1 != null) {
+            if (current1.contact.getLastname().equals(lastName)) {
+                listLastName.add(current1);
+            }
+
+            current1 = current1.next;
+        }
+
+        return listLastName;
+
     }
+
+
 
     public void deleteByFirstName(String firstName) {
         //entisar
