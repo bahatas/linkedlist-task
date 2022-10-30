@@ -63,7 +63,7 @@ public class PhoneBookLinkedList {
         }
         List<PhoneNode> listLastName = new ArrayList<>();
 
-        PhoneNode current1 =head;
+        PhoneNode current1 = head;
 
         while (current1 != null) {
             if (current1.contact.getLastname().equals(lastName)) {
@@ -80,7 +80,26 @@ public class PhoneBookLinkedList {
 
 
     public void deleteByFirstName(String firstName) {
-        //entisar
+       if(isEmpty()) throw new NoSuchElementException("This is an empty list");
+       PhoneNode prev= head;
+       PhoneNode current = head;
+       while(current !=null){
+           if(current.contact.getLastname().equals(firstName))
+              if (current==head){
+                  head=current.next;
+                  current.next=null;
+              }else if
+              (current==tail){
+                  tail=prev;
+                  prev.next=null;
+              }else{
+                  prev.next=current.next;
+                  current.next=null;
+                  size--;
+              }
+       }
+       prev=current;
+       current=current.next;
     }
 
     public void deleteAllMatchingLastName(String lastName) {
