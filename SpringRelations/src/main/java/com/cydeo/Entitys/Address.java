@@ -4,11 +4,9 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import main.java.com.cydeo.Entitys.State;
 import org.springframework.stereotype.Service;
 
 import javax.persistence.Entity;
-import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Getter
@@ -18,9 +16,8 @@ import javax.persistence.Table;
 @NoArgsConstructor
 @AllArgsConstructor
 
-public class Address extends com.cydeo.entity.BaseEntity {
+public class Address extends BaseEntity {
     String description;
     String zipCode;
-    @ManyToOne
-    private State state;//todo add relationship
+    String state;//todo add relationship
 }

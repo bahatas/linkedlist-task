@@ -1,4 +1,4 @@
-package com.cydeo.entity;
+package com.cydeo.Entitys;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

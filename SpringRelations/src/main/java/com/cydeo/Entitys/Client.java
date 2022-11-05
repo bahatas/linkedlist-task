@@ -16,13 +16,13 @@ import javax.persistence.Table;
 @Table(name="clients")
 @NoArgsConstructor
 @AllArgsConstructor
-public class Client extends com.cydeo.entity.BaseEntity {
+public class Client extends BaseEntity {
 
     String clientName;
     String email;
     String phone;
-    @ManyToOne
-    com.cydeo.Entitys.Address address;
+@ManyToOne
+    Address address;
 
 
 }
