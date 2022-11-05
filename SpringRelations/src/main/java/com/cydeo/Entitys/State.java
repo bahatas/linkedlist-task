@@ -1,4 +1,4 @@
-package main.java.com.cydeo.Entitys;
+package com.cydeo.Entitys;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -13,7 +13,7 @@ import java.util.List;
 @Setter
 @NoArgsConstructor
 @Entity
-public class State extends com.cydeo.entity.BaseEntity {
+public class State extends BaseEntity {
 
     String stateCode;
     String stateName;
