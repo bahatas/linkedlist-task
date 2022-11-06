@@ -13,7 +13,7 @@ import javax.persistence.Table;
 @Getter
 @Setter
 @Entity
-@Table(name="clients")
+@Table(name = "clients")
 @NoArgsConstructor
 @AllArgsConstructor
 public class Client extends BaseEntity {
@@ -21,7 +21,7 @@ public class Client extends BaseEntity {
     String clientName;
     String email;
     String phone;
-@ManyToOne
+    @ManyToOne
     Address address;
 
 
