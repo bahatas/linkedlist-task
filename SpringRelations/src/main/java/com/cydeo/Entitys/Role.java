@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.security.SecurityProperties;
 
 import javax.persistence.Entity;
 import javax.persistence.OneToMany;
+import java.util.List;
 
 @Getter
 @Setter
